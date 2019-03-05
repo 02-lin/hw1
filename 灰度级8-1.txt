@@ -1,0 +1,71 @@
+>>  A=imread('C:\Users\lenovo\Desktop\数字图像处理\第二次作业\lena.bmp');
+>> figure(1)
+>> imshow(A);
+>> title('8 bits');%原图像灰度级为8
+>> [x,y]=size(A);%读取图像的长宽
+>> bit7=zeros(x,y);
+>> bit6=zeros(x,y);
+>> bit5=zeros(x,y);
+>> bit4=zeros(x,y);
+>> bit3=zeros(x,y);
+>> bit2=zeros(x,y);
+>> bit1=zeros(x,y);
+>> for i=1:x
+for j=1:y
+bit7(i,j)=round(A(i,j)/2);%把原图像的每个像素灰度级除以2赋给矩阵bit7，round用来四舍五入取整数
+end
+end
+>> figure(2)
+>> imshow((bit7),[0,127]);%imshow(I,[low high])用指定的灰度范围 [low high]显示灰度图像 I。显示结果，图像中灰度值等于或低于low的都将用黑色显示，而灰度值大于等于high的都显示为白色，介于low和high之间的用其灰度级的默认值的中间色调显示。
+>> title('7 bits');% output L=7
+>> for i=1:x
+for j=1:y
+bit6(i,j)=round(bit7(i,j)/2);
+end
+end
+>> figure(3)
+>> imshow((bit6),[0,63]);
+>> title('6 bits');
+>> for i=1:x
+for j=1:y
+bit5(i,j)=round(bit6(i,j)/2);
+end
+end
+>> figure(4)
+>> imshow((bit5),[0,31]);
+>> title('5 bits');
+>> for i=1:x
+for j=1:y
+bit4(i,j)=round(bit5(i,j)/2);
+end
+end
+>> figure(5)
+>> imshow((bit4),[0,15]);
+>> title('4 bits');
+>> for i=1:x
+for j=1:y
+bit3(i,j)=round(bit4(i,j)/2);
+end
+end
+>> figure(6)
+>> imshow((bit3),[0,7]);
+>> title('3 bits');
+>> for i=1:x
+for j=1:y
+bit2(i,j)=round(bit3(i,j)/2);
+end
+end
+>> figure(7)
+>> imshow((bit2),[0,3]);
+>> title('2 bits');
+>> for i=1:x
+for j=1:y
+bit1(i,j)=round(bit2(i,j)/2);
+end
+end
+>> figure(8)
+>> imshow((bit1),[0,1]);
+>> title('1 bits');
+>> figure(9)
+>> imshow(bit1);
+>> 

@@ -1,0 +1,18 @@
+>> A=imread('C:\Users\lenovo\Desktop\数字图像处理\第二次作业\lena.bmp');
+>> biaozhuncha=std2(A)
+
+biaozhuncha =
+
+   52.8775
+
+>> junzhi=mean2(A)
+
+junzhi =
+
+   99.0512
+
+>> fangcha=biaozhuncha^2
+
+fangcha =
+
+   2.7960e+03

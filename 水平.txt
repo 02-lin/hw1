@@ -1,0 +1,38 @@
+
+>> T=[1 1.5 0;0 1 0;0 0 1];
+>> tform=maketform('affine',T);
+>> A1=imread('C:\Users\lenovo\Desktop\数字图像处理\第二次作业\lena.bmp');
+>> A2=imread('C:\Users\lenovo\Desktop\数字图像处理\第二次作业\elain1.bmp');
+>> A10=imtransform(A1,tform);%将图像A1按照变换矩阵T水平shear
+>> A11=imresize(A10,[2048 2048],'nearest');
+>> A12=imresize(A10,[2048 2048],'bilinear');
+>> A13=imresize(A10,[2048 2048],'bicubic');
+>> A20=imtransform(A2,tform);
+>> A21=imresize(A20,[2048 2048],'nearest');
+>> A22=imresize(A20,[2048 2048],'bilinear');
+>> A23=imresize(A20,[2048 2048],'bicubic');
+>> subplot(2,2,1);
+>> imshow(A10);
+>> title('lena 水平 原图');
+>> subplot(2,2,2);
+>> imshow(A11);
+>> title('lena 水平 最近');
+>> subplot(2,2,3);
+>> imshow(A12);
+>> title('lena 水平 双线性');
+>> subplot(2,2,4);
+>> imshow(A13);
+>> title('lena 水平 双三次内插');
+>> subplot(2,2,1)
+>> subplot(2,2,1)
+>> imshow(A20);
+>> title('elain 水平 原图');
+>> subplot(2,2,2)
+>> imshow(A21);
+>> title('elain 水平 最近');
+>> subplot(2,2,3)
+>> imshow(A22);
+>> title('elain 水平 双线性');
+>> subplot(2,2,4)
+>> imshow(A23);
+>> title('elain 水平 双三次内插');

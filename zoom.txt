@@ -1,0 +1,17 @@
+>>  A=imread('C:\Users\lenovo\Desktop\数字图像处理\第二次作业\lena.bmp');
+>> figure(1)
+>> imshow(A);
+>> title('original');
+>> A1=imresize(A,[2048 2048],'nearest');
+>> A2=imresize(A,[2048 2048],'bilinear');
+>> A3=imresize(A,[2048 2048],'bicubic');
+>> figure(2)
+>> imshow(A1);
+>> title('nearest');
+>> figure(3)
+>> imshow(A2);
+>> title('双线性');
+>> figure(4)
+>> imshow(A3);
+>> title('双三次内插');
+>> 

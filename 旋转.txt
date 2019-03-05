@@ -1,0 +1,41 @@
+>>  A1=imread('C:\Users\lenovo\Desktop\数字图像处理\第二次作业\lena.bmp');
+>> A10=imrotate(A1,30,'nearest');
+>> A101=imresize(A10,[2048 2048],'nearest');
+>> A11=imrotate(A1,30,'bilinear');
+>> A111=imresize(A11,[2048 2048],'bilinear');
+>> A12=imrotate(A1,30,'bicubic');
+>> A121=imresize(A12,[2048 2048],'bicubic');
+>> B1=imread('C:\Users\lenovo\Desktop\数字图像处理\第二次作业\elain1.bmp');
+>> B10=imrotate(B1,30,'nearest');
+>> B101=imresize(B10,[2048 2048],'nearest');
+>> B11=imrotate(B1,30,'bilinear');
+>> B111=imresize(B11,[2048 2048],'bilinear');
+>> B12=imrotate(B1,30,'bicubic');
+>> B121=imresize(B12,[2048 2048],'bicubic');
+>> figure(1)
+>> subplot(2,2,1)
+>> imshow(A1);
+>> title('lena 原图');
+>> subplot(2,2,2)
+>> imshow(A101);
+>> title('lena 旋转 最近');
+>> subplot(2,2,3)
+>> imshow(A111);
+>> title('lena 旋转 双线性');
+>> subplot(2,2,4)
+>> imshow(A121);
+>> title('lena 旋转 双三位内插');
+>> figure(2)
+>> subplot(2,2,1)
+>> imshow(B1);
+>> title('elain 旋转 原图');
+>> subplot(2,2,2)
+>> imshow(B101);
+>> title('elian 旋转 最近');
+>> subplot(2,2,3)
+>> imshow(B111);
+>> title('elain 旋转 双线性');
+>> subplot(2,2,4)
+>> imshow(B121);
+>> title('elain 旋转 双三位内插');
+>> 
